@@ -73,16 +73,30 @@ function twins(arr) {
     }
   }
   console.log(true);
-  return true; 
+  return true;
 }
 
 
-function or() {
-
+function or(array4) {
+  if (array4.length === 0) {
+    console.log(false);
+    return false;
+  }
+  while (array4.length > 0) {
+    if (array4[0] === false) {
+      array4.shift();
+    } else {
+      console.log(true);
+      return true;
+    }
+  }
+  console.log(false);
+  return false;
 }
 
-function unique() {
-
+function unique(array7) {
+  console.log(Array.from(new Set(array7)));
+  return Array.from(new Set(array7));
 }
 
 
@@ -108,3 +122,12 @@ var array3 = ['a', 'b', 'b', 'b'];
 twins(array1);
 twins(array2);
 twins(array3);
+console.log("break in functions");
+var array4 = [false, false, true, false, false, true];
+var array5 = [];
+var array6 = [false, false, false];
+or(array4);
+or(array5);
+or(array6);
+var array7 = ['a', 'a', 'b', 'c', 'd', 'd'];
+unique(array7);
